@@ -98,7 +98,7 @@ export default function MainLayout({ children }) {
           </Link>
           <div className="mt-10 text-center lg:mt-12 lg:text-left">
             <p className="text-xl font-bold text-slate-900">
-              <Link href="/">This Developer's Life</Link>
+              <Link href="/">This Developer&apos;s Life</Link>
             </p>
             <p className="mt-3 text-lg font-medium leading-8 text-slate-700">
               Stories from people across the tech industry, sharing their motivation, fears, fun, and life!
