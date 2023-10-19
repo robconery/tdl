@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from "next/image"
+import Head from 'next/head';
 import { Container } from '@/components/Container'
 import { EpisodePlayButton } from '@/components/EpisodePlayButton'
 import { FormattedDate } from '@/components/FormattedDate'
@@ -29,10 +29,31 @@ function EpisodeEntry({ episode }) {
   let date = new Date(episode.published)
 
   return (
+   
     <article
       aria-labelledby={`episode-${episode.id}-title`}
       className="py-10 sm:py-12"
     >
+      <Head>
+        <meta data-hid="title" name="title" content="Welcome to Big Machine" />
+        <meta data-hid="description" name="description"
+          content="Don't have a degree and feel like you should? Hey me too! Then again I love teaching myself things and sharing with people and I wouldn't have it any other way. That's what I do here."/>
+        <meta data-hid="og:title" name="og:title" content="Welcome to Big Machine"/>
+        <meta data-hid="og:description" name="og:description"
+          content="Don't have a degree and feel like you should? Hey me too! Then again I love teaching myself things and sharing with people and I wouldn't have it any other way. That's what I do here."/>
+        <meta data-hid="og:image" name="og:image" content="https://bigmachine.io/images/stuff.png"/>
+        <meta data-hid="og:url" name="og:url" content="https://bigmachine.io/"/>
+        <meta data-hid="twitter:title" name="twitter:title" content="Welcome to Big Machine"/>
+        <meta data-hid="twitter:description" name="twitter:description"
+          content="Don't have a degree and feel like you should? Hey me too! Then again I love teaching myself things and sharing with people and I wouldn't have it any other way. That's what I do here."/>
+        <meta data-hid="twitter:image" name="twitter:image"
+          content="https://bigmachine.io/images/stuff.png"/>
+        <meta data-hid="twitter:creator" name="twitter:creator" content="@robconery"/>
+        <meta data-hid="twitter:site" name="twitter:site" content="@robconery"/>
+        <meta data-hid="twitter:card" name="twitter:card" content="summary_large_image"/>
+      </Head>
+
+
       <Container>
         <div className="flex flex-col items-start">
           <p>
