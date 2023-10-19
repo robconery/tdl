@@ -1,13 +1,9 @@
 import '@/styles/tailwind.css'
-import posterImage from '@/images/poster.jpg'
+
 export const metadata = {
   metadataBase: "https://thisdeveloperslife.com",
-  title: {
-    template: '%s - TDL',
-    default: "This Developer's Life - stories from tech folks sharing their lives.",
-  },
+  title: "This Developer's Life",
   description:'Stories from tech people just like you.',
-  "og:title": "blah",
   openGraph: {
     title: "This Developer's Life - stories from tech folks sharing their lives",
     description: 'Stories from tech people just like you.',
