@@ -1,13 +1,16 @@
 import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Head from "next/head"
 import { AboutSection } from '@/components/AboutSection'
 import { AudioProvider } from '@/components/AudioProvider'
 import { AudioPlayer } from '@/components/player/AudioPlayer'
 import { TinyWaveFormIcon } from '@/components/TinyWaveFormIcon'
 import { Waveform } from '@/components/Waveform'
 import posterImage from '@/images/poster.jpg'
+import { Metadata, ResolvingMetadata } from 'next'
+
+
+
 
 function SpotifyIcon(props) {
   return (
