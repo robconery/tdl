@@ -43,15 +43,15 @@ function EpisodeEntry({ episode }) {
             id={`episode-${episode.id}-title`}
             className="mt-2 text-lg font-bold text-slate-900"
           >
-            <Link href={`/${episode.id}`}>{episode.title}</Link>
+            <Link href={`${episode.url}`}>{episode.title}</Link>
           </h2>
           <FormattedDate
             date={date}
             className="order-first font-mono text-sm leading-7 text-slate-500"
           />
-          <p className="mt-1 text-base leading-7 text-slate-700">
-            {episode.description}
-          </p>
+          <div className="mt-1 text-base leading-7 text-slate-700" dangerouslySetInnerHTML={{ __html: episode.description }}>
+
+          </div>
           <div className="mt-4 flex items-center gap-4">
             <EpisodePlayButton
               episode={episode}
@@ -76,7 +76,7 @@ function EpisodeEntry({ episode }) {
               /
             </span>
             <Link
-              href={`${episode.id}`}
+              href={`${episode.url}`}
               className="flex items-center text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900"
               aria-label={`Show notes for episode ${episode.title}`}
             >

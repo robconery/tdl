@@ -27,18 +27,24 @@ export async function getAllEpisodes() {
   //let items = parse(FeedSchema, feed).items
 
   let episodes = feed.items.map(
-    ({ id, title, description, content, enclosures, published, itunes_image }) => ({
-      id: (id.split(":")[2]),
-      title: title,
-      image: (itunes_image ? itunes_image.href : ""),
-      published: new Date(published),
-      description: description.replace("<p>","").replace("</p>",""),
-      content,
-      audio: enclosures.map((enclosure) => ({
-        src: enclosure.url,
-        type: enclosure.type,
-      }))[0],
-    }),
+    ({ id, title, description, content, enclosures, published, itunes_image }) => {
+
+      const url = (id.split(":")[2]);
+      return {
+        id,
+        url,
+        title: title,
+        image: (itunes_image ? itunes_image.href : ""),
+        published: new Date(published),
+        description,
+        content,
+        audio: enclosures.map((enclosure) => ({
+          src: enclosure.url,
+          type: enclosure.type,
+        }))[0],
+      }
+  }
+    ,
   )
 
   return episodes
