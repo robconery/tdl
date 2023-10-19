@@ -10,6 +10,7 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
+    "@netlify/plugin-nextjs": "^4.41.0",
     "@tailwindcss/typography": "^0.5.7",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",

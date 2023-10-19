@@ -23,12 +23,12 @@ export async function getAllEpisodes() {
   //https://open.spotify.com/show/0u4yIncvhevlTX2gWDwSWA
   //https://feeds.buzzsprout.com/2263824.rss
   let feed = await parseFeed('https://feeds.buzzsprout.com/2263824.rss')
-  console.log(feed.items[0].itunes_image);
+
   //let items = parse(FeedSchema, feed).items
 
   let episodes = feed.items.map(
     ({ id, title, description, content, enclosures, published, itunes_image }) => ({
-      id,
+      id: (id.split(":")[2]),
       title: title,
       image: (itunes_image ? itunes_image.href : ""),
       published: new Date(published),
