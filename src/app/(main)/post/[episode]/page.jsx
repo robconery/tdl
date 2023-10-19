@@ -24,15 +24,14 @@ const getEpisode = cache(async (id) => {
 export async function generateMetadata({ params }) {
   let episode = await getEpisode(params.episode)
 
-
+    const description = episode.description.substring(0,200).replace("<p>","").replace("</p>","")
     return {
       metadataBase: "https://thisdeveloperslife.com",
       title: episode.title,
-      description:'Stories from tech people just like you.',
-      "og:title": "blah",
+      description,
       openGraph: {
         title: episode.title,
-        description: 'Stories from tech people just like you.',
+        description,
         url: `https://thisdeveloperslife.com${episode.url}`,
         siteName: "This Developer's Life",
         images: [
@@ -48,7 +47,7 @@ export async function generateMetadata({ params }) {
       twitter: {
         card: 'summary_large_image',
         title: episode.title,
-        description: episode.description.substring(0,200).replace("<p>","").replace("</p>",""),
+        description,
         creator: '@shanselman,@robconery',
         images: [episode.image],
       },
