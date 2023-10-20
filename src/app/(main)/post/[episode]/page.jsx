@@ -24,7 +24,7 @@ const getEpisode = cache(async (id) => {
 export async function generateMetadata({ params }) {
   let episode = await getEpisode(params.episode)
 
-    const description = episode.description.substring(0,200).replace("<p>","").replace("</p>","")
+    const description = episode.summary;
     return {
       metadataBase: "https://thisdeveloperslife.com",
       title: episode.title,
