@@ -30,9 +30,12 @@ export async function getAllEpisodes() {
     ({ id, title, description, content, enclosures, published, itunes_image }) => {
 
       const url = (id.split(":")[2]);
+      const pidx = description.indexOf("</p>");
+      const summary = description.substring(0,pidx).replace("<p>","");
       return {
         id,
         url,
+        summary,
         title: title,
         image: (itunes_image ? itunes_image.href : ""),
         published: new Date(published),
