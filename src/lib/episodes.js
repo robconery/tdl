@@ -22,7 +22,8 @@ export async function getAllEpisodes() {
 
   //https://open.spotify.com/show/0u4yIncvhevlTX2gWDwSWA
   //https://feeds.buzzsprout.com/2263824.rss
-  let feed = await parseFeed('https://feeds.buzzsprout.com/2263824.rss')
+  //let feed = await parseFeed('https://feeds.buzzsprout.com/2263824.rss')
+  let feed = await parseFeed('https://feeds.zencastr.com/f/Donxfwf3.rss')
 
   //let items = parse(FeedSchema, feed).items
 
