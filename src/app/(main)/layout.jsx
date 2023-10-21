@@ -118,7 +118,7 @@ export default function MainLayout({ children }) {
               className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
             >
               {[
-                ['Spotify', SpotifyIcon, "https://open.spotify.com/show/0u4yIncvhevlTX2gWDwSWA"],
+                ['Spotify', SpotifyIcon, "https://open.spotify.com/show/64U860dkIVA4BJaaDH8tMP"],
                 ['Apple Podcast', ApplePodcastIcon, "https://podcasts.apple.com/us/podcast/this-developers-life/id389727545?uo=4"],
                 ['Overcast', OvercastIcon, "https://overcast.fm/itunes389727545"],
                 ['RSS Feed', RSSIcon, "https://feeds.buzzsprout.com/2263824.rss"],
