@@ -29,12 +29,15 @@ export async function getAllEpisodes() {
 
   let episodes = feed.items.map(
     ({ id, title, description, content, enclosures, published, itunes_image }) => {
-
-      const url = (id.split(":")[2]);
+      
+      //const url = (id.split(":")[2]);
+      const slug = (title.replaceAll(".","-").replaceAll(" ","-").toLowerCase());
+      const url = `/post/${slug}`;
       const pidx = description.indexOf("</p>");
       const summary = description.substring(0,pidx).replace("<p>","");
       return {
         id,
+        slug,
         url,
         summary,
         title: title,

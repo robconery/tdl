@@ -11,8 +11,8 @@ import { getAllEpisodes } from '@/lib/episodes'
 
 const getEpisode = cache(async (id) => {
   let allEpisodes = await getAllEpisodes()
-  let episode = allEpisodes.find((episode) => episode.id.indexOf(id) > 0)
-  //console.log(id);
+  let episode = allEpisodes.find((episode) => episode.slug === id)
+  console.log(id);
   //episode = allEpisodes[0]
 
   if (!episode) {
