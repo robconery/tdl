@@ -15,25 +15,10 @@ export function AboutSection(props) {
           colors={['fill-violet-300', 'fill-pink-300']}
           className="h-2.5 w-2.5"
         />
-        <span className="ml-2.5">About</span>
+        <span className="ml-2.5">
+        <a href="/about" className="hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block">About</a>
+        </span>
       </h2>
-      <p
-        className={clsx(
-          'mt-2 text-base leading-7 text-slate-700',
-          !isExpanded && 'lg:line-clamp-4',
-        )}
-      >
-        In this show, Rob Conery and Scott Hanselman hear stories from folks in the tech industry, talking about their lives and what motivates them.
-      </p>
-      {!isExpanded && (
-        <button
-          type="button"
-          className="mt-2 hidden text-sm font-bold leading-6 text-pink-500 hover:text-pink-700 active:text-pink-900 lg:inline-block"
-          onClick={() => setIsExpanded(true)}
-        >
-          Show more
-        </button>
-      )}
     </section>
   )
 }
