@@ -1,4 +1,5 @@
 import '@/styles/tailwind.css'
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   metadataBase: "https://thisdeveloperslife.com",
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="flex min-h-full">
         <div className="w-full">{children}</div>
+        <Analytics />
       </body>
     </html>
   )

@@ -12,6 +12,7 @@
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.41.0",
     "@tailwindcss/typography": "^0.5.7",
+    "@vercel/analytics": "^1.1.1",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "next": "13.5.2",
