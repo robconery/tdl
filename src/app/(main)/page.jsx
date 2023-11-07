@@ -4,6 +4,35 @@ import { EpisodePlayButton } from '@/components/EpisodePlayButton'
 import { FormattedDate } from '@/components/FormattedDate'
 import { getAllEpisodes } from '@/lib/episodes'
 
+
+export const metadata = {
+  metadataBase: "https://thisdeveloperslife.com",
+  title: "This Developer's Life",
+  description:'Stories from tech people just like you.',
+  openGraph: {
+    title: "This Developer's Life - stories from tech folks sharing their lives",
+    description: 'Stories from tech people just like you.',
+    url: 'https://thisdeveloperslife.com',
+    siteName: "This Developer's Life",
+    images: [
+      {
+        url: 'https://media.zencastr.com/cdn-cgi/image/width=960,quality=75/image-files/6532b7d6e7ebb15eea49bc9a/8e3181a1-649b-4ea0-884c-0b4fec81dc57.jpg',
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "This Developer's Life - stories from tech folks sharing their lives",
+    description: 'Stories from tech people just like you.',
+    creator: '@shanselman,@robconery',
+    images: ['https://media.zencastr.com/cdn-cgi/image/width=960,quality=75/image-files/6532b7d6e7ebb15eea49bc9a/8e3181a1-649b-4ea0-884c-0b4fec81dc57.jpg'],
+  },
+}
+
 function PauseIcon(props) {
   return (
     <svg aria-hidden="true" viewBox="0 0 10 10" {...props}>
